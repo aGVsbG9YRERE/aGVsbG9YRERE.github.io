@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WARNING!!!</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+</head>
+
+<body style="background-color: #668ebf">
+
+  <div class="window" style="margin: 0 auto; align:center; width: 350px; position: relative;">
+    <div class="title-bar">
+      <div class="title-bar-text">
+        SYSTEM WARNING!!!
+      </div>
+      <div class="title-bar-controls">
+      <button aria-label="Close"></button>
+    </div>
+    </div>
+    <div class="window-body">
+      <p id="XDD" stlye="font-weight: bold">Your pc is infected with 5 viruses and it need repair!!!!</p>
+      <p id="os-text" style="font-weight: bolder">Operation System: Windows 99</p>
+      <p stlye="font-weight: bold">Please note: All your files will be <span style="color: red; font-weight: bolder">permantly deleted in 2 seconds if you no repair your pc</span></p>
+      <p> <span style="font-weight: bolder">TO DO REPAIR: </span> Press "REPAIR NOW!" button! </p>
+      <button>REPAIR NOW!</button>
+      <button disabled>NO I WANT VIRUSES IN MY PC</button>
+    </div>
+  </div>
+
+  <script>
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+    document.querySelector("#XDD").textContent = "Your pc is infected with " + getRandomInt(5, 69) + " viruses and it need repair!!!!"
+    let os = navigator.userAgent;
+    var OSName = "";
+    if (os.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
+    if (os.indexOf("Windows NT 6.3") != -1) OSName="Windows 8.1";
+    if (os.indexOf("Windows NT 6.2") != -1) OSName="Windows 8";
+    if (os.indexOf("Windows NT 6.1") != -1) OSName="Windows 7";
+    if (os.indexOf("Windows NT 6.0") != -1) OSName="Windows Vista";
+    if (os.indexOf("Windows NT 5.1") != -1) OSName="Windows XP";
+    if (os.indexOf("Windows NT 5.0") != -1) OSName="Windows 2000";
+    if (os.search('Windows')!==-1){
+      document.querySelector("#os-text").textContent = "Operation System: " + OSName;
+    };
+  </script>
+</body>
+</html>
